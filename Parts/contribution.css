@@ -1,0 +1,497 @@
+#banner {
+    background-attachment: scroll, fixed;
+    background-color: #666;
+    background-image: url("https://2020.igem.org/wiki/images/b/b1/T--Mingdao--home.jpeg");
+    background-position: top left, center center;
+    background-repeat: repeat, no-repeat;
+    color: #fff;
+    background-size: 100%;
+    text-align: center;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+#banner :last-child {
+    margin-bottom: 0;
+}
+
+#banner h2,
+#banner h3,
+#banner h4,
+#banner h5,
+#banner h6 {
+    color: #fff;
+}
+
+#banner h2 {
+    font-size: 3.5em;
+    line-height: 1em;
+    margin: 0 0 0.5em 0;
+    padding: 0;
+}
+
+#banner p {
+    font-size: 1.25em;
+    margin-bottom: 1.75em;
+    text-align: center;
+}
+
+#banner input[type="submit"],
+#banner input[type="reset"],
+#banner input[type="button"],
+#banner .button {
+    background-color: transparent;
+    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.5);
+    color: #fff;
+    min-width: 12em;
+}
+
+#banner input[type="submit"]:hover,
+#banner input[type="reset"]:hover,
+#banner input[type="button"]:hover,
+#banner .button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#banner input[type="submit"]:active,
+#banner input[type="reset"]:active,
+#banner input[type="button"]:active,
+#banner .button:active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#banner input[type="submit"].primary,
+#banner input[type="reset"].primary,
+#banner input[type="button"].primary,
+#banner .button.primary {
+    background: #fff;
+    color: #666 !important;
+}
+
+
+/* Main */
+
+#home {
+    padding: 0;
+}
+
+#main {
+    padding: 4em 0;
+}
+
+#main>header {
+    text-align: center;
+    margin: 0 0 3em 0;
+}
+
+#main>header h2 {
+    font-size: 2.75em;
+    margin: 0;
+}
+
+#main>header p {
+    border-top: solid 2px #e5e5e5;
+    color: #777;
+    display: inline-block;
+    font-style: normal;
+    margin: 1em 0 0 0;
+    padding: 1em 0 1.25em 0;
+}
+
+body.landing #main {
+    margin-top: -14em;
+}
+
+ :root {
+    --color-primary: #0073ff;
+    --color-white: #e9e9e9;
+    --color-black: #141d28;
+    --color-black-1: #212b38;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.logo h1 {
+    color: white;
+    font-size: 30px;
+}
+
+.logo span {
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+.menu-bar {
+    background-color: var(--color-black);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.menu-bar ul {
+    list-style: none;
+    display: flex;
+}
+
+.menu-bar ul li {
+    /* width: 120px; */
+    padding: 10px 30px;
+    /* text-align: center; */
+    position: relative;
+}
+
+.menu-bar ul li a {
+    font-size: 20px;
+    color: var(--color-white);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.menu-bar ul li a:hover {
+    color: var(--color-primary);
+}
+
+.fas {
+    float: right;
+    margin-left: 10px;
+    padding-top: 3px;
+}
+
+
+/* dropdown menu style */
+
+.dropdown-menu {
+    display: none;
+}
+
+.menu-bar ul li:hover .dropdown-menu {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: var(--color-black);
+}
+
+.menu-bar ul li:hover .dropdown-menu ul {
+    display: block;
+    margin: 10px;
+}
+
+.menu-bar ul li:hover .dropdown-menu ul li {
+    width: 150px;
+    padding: 10px;
+}
+
+
+/**/
+
+
+/* 1. Enable smooth scrolling */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* 2. Make nav sticky */
+
+main>nav {
+    position: sticky;
+    top: 5rem;
+    align-self: start;
+}
+
+
+/* 3. ScrollSpy active styles (see JS tab for activation) */
+
+.section-nav li.active>a {
+    color: #333;
+    font-weight: 500;
+}
+
+
+/* Sidebar Navigation */
+
+.section-nav {
+    padding-left: 0;
+    border-left: 1px solid #efefef;
+    width: 21em;
+    color: black;
+}
+
+.section-nav a {
+    text-decoration: none;
+    display: block;
+    padding: .125rem 0;
+    color: #ccc;
+    transition: all 50ms ease-in-out;
+    /* ? This small transition makes setting of the active state smooth */
+}
+
+.section-nav a:hover,
+.section-nav a:focus {
+    color: #666;
+}
+
+
+/* Box */
+
+.box {
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 0 0 #e5e5e5;
+    margin: 200px 0 2em 0;
+    padding: 1em;
+}
+
+.box> :last-child {
+    margin-bottom: 0;
+}
+
+.box .box.alt {
+    background: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    margin: 0 0 2em 0;
+    padding: 0 !important;
+}
+
+.box.features .features-row {
+    border-top: solid 2px #e5e5e5;
+    position: relative;
+}
+
+.box.features .features-row:after {
+    clear: both;
+    content: '';
+    display: block;
+}
+
+.box.features .features-row section {
+    float: left;
+    padding: 3em;
+    width: 50%;
+}
+
+.box.features .features-row section :last-child {
+    margin-bottom: 0;
+}
+
+.box.features .features-row section:nth-child(2n) {
+    padding-right: 0;
+}
+
+.box.features .features-row section:nth-child(2n):before {
+    background: #e5e5e5;
+    content: '';
+    display: block;
+    height: 100%;
+    margin-left: -3em;
+    position: absolute;
+    top: 0;
+    width: 2px;
+}
+
+.box.features .features-row section:nth-child(2n-1) {
+    padding-left: 0;
+}
+
+.box.features .features-row:first-child {
+    border-top: 0;
+}
+
+.box.features .features-row:first-child section {
+    padding-top: 0;
+}
+
+.box.features .features-row:last-child {
+    padding-bottom: 0;
+}
+
+.box.features .features-row:last-child section {
+    padding-bottom: 0;
+}
+
+.box.special {
+    text-align: center;
+    width: 100%
+}
+
+.box .image.featured {
+    border-radius: 0;
+    display: block;
+    margin: 3em 0 3em -3em;
+    position: relative;
+    width: calc(100% + 6em);
+}
+
+.box .image.featured img {
+    border-radius: 0;
+    display: block;
+    width: 100%;
+}
+
+.box .image.featured:first-child {
+    border-radius: 6px 6px 0 0;
+    margin-bottom: 3em;
+    margin-top: -3em;
+}
+
+.box .image.featured:first-child img {
+    border-radius: 6px 6px 0 0;
+}
+
+.box .image.featured:last-child {
+    border-radius: 0 0 6px 6px;
+    margin-bottom: -3em;
+    margin-top: 3em;
+}
+
+.box .image.featured:last-child img {
+    border-radius: 0 0 6px 6px;
+}
+
+
+/* Section/Article */
+
+section.nom {
+    padding: 0 0 0 0;
+    margin-top: 10px;
+}
+
+section.nom.section.nom {
+    padding: 0 0 0 0;
+    margin-top: 10px;
+}
+
+section.nom.section.con {
+    margin-top: 0px;
+}
+
+section.special,
+article.special {
+    text-align: center;
+}
+
+header p {
+    color: #999;
+    position: relative;
+    margin: 0 0 1.5em 0;
+    font-style: italic;
+}
+
+header h2+p {
+    font-size: 1.25em;
+    margin-top: -1em;
+    line-height: 1.5em;
+}
+
+header h3+p {
+    font-size: 1.1em;
+    margin-top: -0.85em;
+    line-height: 1.5em;
+}
+
+header h4+p,
+header h5+p,
+header h6+p {
+    font-size: 0.8em;
+    margin-top: -0.5em;
+    line-height: 1.5em;
+}
+
+header.major {
+    text-align: left;
+    width: 100%;
+}
+
+header.major h2 {
+    margin: 0;
+}
+
+header.major p {
+    display: inline-block;
+    border-top: solid 2px #e5e5e5;
+    color: #777;
+    margin: 1.5em 0 0 0;
+    padding: 1.5em 0 0 0;
+    font-style: normal;
+}
+
+
+/* Container */
+
+.container {
+    margin: 0 auto;
+    max-width: 95%;
+    width: 60em;
+}
+
+.container.xsmall {
+    width: 15em;
+}
+
+.container.small {
+    width: 30em;
+}
+
+.container.medium {
+    width: 45em;
+}
+
+.container.large {
+    width: 75em;
+}
+
+.container.xlarge {
+    width: 90em;
+}
+
+.container.max {
+    width: 100%;
+}
+
+@media screen and (max-width: 840px) {
+    .container {
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+#gotop {
+    position: fixed;
+    z-index: 90;
+    right: 30px;
+    bottom: 31px;
+    display: none;
+    width: 50px;
+    height: 50px;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0);
+    line-height: 50px;
+    transition: all 0.5s;
+    text-align: center;
+}
+
+#gotop :hover {
+    background: rgba(255, 255, 255, 0);
+}
