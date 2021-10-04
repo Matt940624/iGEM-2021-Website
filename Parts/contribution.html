@@ -93,7 +93,11 @@
             <a href="https://2021.igem.org/Team:Mingdao/Collaborations" id="gotop">
                 <img src="https://2020.igem.org/wiki/images/5/5f/T--Mingdao--top_button.svg" width=5%>
             </a>
-            <div style="line-height: 2em;">
+            <div style="line-height: 2em; margin-left: 140px;
+
+            font-size: 18px;
+            /* Increased text to enable scrolling */
+            padding: 0px 10px;">
                 <br>
                 <section id="CHARACTERIZATION OF AN EXISTING BIOBRICK PART" class="nom">
                     <h2><span style="color:#FF7B00 ">CHARACTERIZATION OF AN EXISTING BIOBRICK PART<ul><a href= http://parts.igem.org/Part:BBa_K3376000> Part: BBa_K3376000</a></ul> (S. mutans lactate dehydrogenase promoter)</span></h2>
@@ -178,34 +182,34 @@
 
 
                     <script type="text/javascript">
-                        $(function() {
-                            /* 按下GoTop按鈕時的事件 */
-                            $('#gotop').click(function() {
-                                $('html,body').animate({
-                                    scrollTop: $('#open').offset().top - 50
-                                }, 'slow'); /* 返回到最頂上 */
-                                return false;
-                            });
+                        $(document).ready(function() {
 
-                            /* 偵測卷軸滑動時，往下滑超過400px就讓GoTop按鈕出現 */
+                            $("#DIV1").hide(); //hide your div initially
+
+                            var topOfOthDiv1 = $("#DIV2").offset().top;
+                            var topOfOthDiv3 = $("#DIV3").offset().top;
+
                             $(window).scroll(function() {
-                                if ($(this).scrollTop() > 400) {
-                                    $('#gotop').fadeIn();
+                                if ($(window).scrollTop() < topOfOthDiv1) {
+                                    $("#DIV1").fadeOut(200); //reached the desired point -- show div
                                 } else {
-                                    $('#gotop').fadeOut();
+                                    if ($(window).scrollTop() < topOfOthDiv3) { //scrolled past the other div?
+                                        $("#DIV1").fadeIn(200); //reached the desired point -- show div
+                                    } else if ($(window).scrollTop() > topOfOthDiv3) { //scrolled past the other div?
+                                        $("#DIV1").fadeOut(200); //reached the desired point -- show div
+                                    }
                                 }
                             });
+
                         });
                     </script>
-                    <nav class="section-nav">
+                    <div class="section-nav">
                         <br>
                         <br>
-                        <ol>
-                            <li><a href="#CHARACTERIZATION OF AN EXISTING BIOBRICK PART" style="color:#727272"><span style="font-size:23px">CHARACTERIZATION OF AN EXISTING BIOBRICK PART</span></a></li>
-                            <li><a href="SCREENSHOT ON THE PART REGISTRY MAIN PAGE" style="color:#727272"><span style="font-size:23px">SCREENSHOT ON THE PART REGISTRY MAIN PAGE</span></a></li>
-                            <li><a href="#REFERENCE" style="color:#727272"><span style="font-size:23px">REFERENCE</span></a></li>
-                        </ol>
-                    </nav>
+                        <a href="#CHARACTERIZATION OF AN EXISTING BIOBRICK PART">CHARACTERIZATION OF AN EXISTING BIOBRICK PART</a>
+                        <a href="#SCREENSHOT ON THE PART REGISTRY MAIN PAGE">SCREENSHOT ON THE PART REGISTRY MAIN PAGE</a>
+                        <a href="#REFERENCE">REFERENCE</a>
+                    </div>
 
 </body>
 
